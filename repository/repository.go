@@ -29,7 +29,7 @@ func InitDatabase(D config.DatabaseConfig) *gorm.DB {
 	}
 
 	// Migrate the schema
-	if err := db.AutoMigrate(model.Food{}, model.Drink{}, model.Staff{}); err != nil {
+	if err := db.AutoMigrate(model.Food{}, model.Drink{}, model.Staff{}, model.Topping{}); err != nil {
 		panic(err)
 	}
 	log.Print("database sucessfully loaded")
