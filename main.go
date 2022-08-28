@@ -15,5 +15,6 @@ func main() {
 	// Init for service
 	S := service.InitService(R)
 	// Init for interface
-	interfaces.InitInterfaces(S)
+	I := interfaces.InitInterfaces(S)
+	I.MenuInterfaces()
 }
